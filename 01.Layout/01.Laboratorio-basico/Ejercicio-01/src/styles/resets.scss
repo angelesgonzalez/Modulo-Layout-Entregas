@@ -1,0 +1,56 @@
+/* Modern CSS Reset */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box; /* Use border-box for easier sizing */
+}
+
+* {
+	margin: 0; /* Remove all default margins */
+}
+
+html {
+	scroll-behavior: smooth; /* Smooth scrolling */
+	line-height: 1.5; /* Accessible line height */
+	-webkit-font-smoothing: antialiased; /* Improve font rendering on WebKit */
+	-moz-osx-font-smoothing: grayscale; /* Improve font rendering on Firefox */
+}
+
+body {
+	min-height: 100vh; /* Full viewport height */
+	text-rendering: optimizeSpeed; /* Improve text rendering */
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Helvetica, Arial, sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block; /* Remove inline spacing */
+	max-width: 100%; /* Responsive media */
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit; /* Inherit fonts for form controls */
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word; /* Prevent overflow in text */
+}
+
+#root,
+#__next {
+	isolation: isolate; /* Create a stacking context for root containers */
+}
