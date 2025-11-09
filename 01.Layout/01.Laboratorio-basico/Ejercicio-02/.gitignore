@@ -22,10 +22,6 @@ Temporary Items
 /dist
 /node_modules
 
-# Sass cache and generated files
-**/.sass-cache
-*.css.map
-*.css
 
 # Environment variables
 .env.local
