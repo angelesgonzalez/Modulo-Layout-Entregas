@@ -9,12 +9,15 @@
 Implementa una función `head` (inmutable), tal que, dado un array como entrada extraiga y devuelva su primer elemento. Utiliza destructuring.
 
 ```js
+
 const head = (array) => {
- if (Array.isArray(array) && array.length > 0) {
-  const arrayCopy = [...array];
-  return arrayCopy.shift();
- } else return "Error, please introduce an Array with at least one element.";
+  if (!Array.isArray(array) || array.length === 0) {
+    return "Error, please introduce an Array with at least one element.";
+  }
+  const [firstElement] = array;
+  return firstElement;
 };
+
 ```
 
 #### Tail
@@ -35,13 +38,14 @@ const tail = (array) => {
 Implementa una función `init` (inmutable), tal que, dado un array como entrada devuelva todos los elementos menos el último. Utiliza los métodos que ofrece Array.prototype.
 
 ```js
+
 const init = (array) => {
- if (Array.isArray(array) && array.length > 1) {
-  const arrayCopy = [...array];
-  arrayCopy.pop();
-  return arrayCopy;
- } else return "Error, please introduce an Array with at least two elements.";
+  if (!Array.isArray(array) || array.length <= 1) {
+    return "Error, please introduce an Array with at least two elements.";
+  }
+   return array.slice(0, -1);
 };
+
 ```
 
 #### Last
@@ -49,13 +53,15 @@ const init = (array) => {
 Implementa una función `last` (inmutable), tal que, dado un array como entrada devuelva el último elemento.
 
 ```js
+
 const last = (array) => {
- if (Array.isArray(array) && array.length > 1) {
-  const arrayCopy = [...array];
-  return arrayCopy.pop();
-  
- } else return "Error, please introduce an Array with at least two elements.";
+  if (!Array.isArray(array) || array.length <= 1) {
+    return "Error, please introduce an Array with at least two elements.";
+  }
+  const [...rest, lastElement] = array;
+  return lastElement;
 };
+
 ```
 
 ### 2. Concat
