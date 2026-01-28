@@ -1,0 +1,9 @@
+{
+  "name": "slot-machine",
+  "version": "1.0.0",
+  "description": "Slot Machine TypeScript project",
+  "scripts": {
+    "dev": "tsc --watch",
+    "start": "node slot-machine.js"
+  }
+}
